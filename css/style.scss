@@ -11,7 +11,9 @@
 $color-purple: #a350a3;
 $color-pink: #c1436d;
 $color-bg: #1d2228;
+$color-bg-half: hsla(213, 15%, 14%, 0.952);
 $color-white: #f1e9f1;
+$color-white-half: hsla(300, 22%, 93%, 0.541);
 //
 $video-width: 70vw;
 //
@@ -32,6 +34,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 .box {
     height: 100vh;
@@ -63,10 +66,12 @@ section {
 
 .stage-two {
     padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
     background-color: $color-bg;
     // background-color: red;
     // padding-top: 0;
-    height: 75vh;
+    height: 75vh; // 5
     display: flex;
     // align-items: center;
     justify-content: center;
@@ -112,6 +117,7 @@ button {
     width: calc(50vw /2);
 }
 select {
+    text-align: center;
     font-size: 2rem;
     height: 5rem;
     width: 100%;
@@ -124,7 +130,26 @@ select {
     }
 }
 .stage-three {
+    p {
+        color: $color-white-half;
+        display:contents;
+    }
+    a {
+        text-transform: uppercase;
+        color: $color-white-half;
+        font-weight: bolder;
+        text-decoration: none;
+        &::after {
+            text-decoration: none;
+        }
+    }
+    margin: 0;
+    padding: 0;
     text-align: center;
-    background-color: royalblue;
+    background-color: $color-bg-half;
     height: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

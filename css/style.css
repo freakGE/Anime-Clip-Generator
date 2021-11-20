@@ -13,6 +13,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 .box {
@@ -44,6 +45,8 @@ section .header h1 {
 
 .stage-two {
   padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
   background-color: #1d2228;
   height: 75vh;
   display: flex;
@@ -89,6 +92,7 @@ button:hover {
 }
 
 select {
+  text-align: center;
   font-size: 2rem;
   height: 5rem;
   width: 100%;
@@ -102,7 +106,25 @@ select:hover {
 }
 
 .stage-three {
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color: royalblue;
+  background-color: rgba(30, 35, 41, 0.952);
   height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stage-three p {
+  color: rgba(241, 233, 241, 0.541);
+  display: contents;
+}
+.stage-three a {
+  text-transform: uppercase;
+  color: rgba(241, 233, 241, 0.541);
+  font-weight: bolder;
+  text-decoration: none;
+}
+.stage-three a::after {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
