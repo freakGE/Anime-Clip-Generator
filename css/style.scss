@@ -15,7 +15,7 @@ $color-bg-half: hsla(213, 15%, 14%, 0.952);
 $color-white: #f1e9f1;
 $color-white-half: hsla(300, 22%, 93%, 0.541);
 //
-$video-width: 70vw;
+$video-width: 50vw;
 //
 $glow: 
         0 0 3px $color-pink,
@@ -78,20 +78,20 @@ section {
     .video {
         background-color: royalblue;
         // width: $video-width;
-        width: 50vw;
-        height: 50vh;
+        // width: 50vw; //aq
+        // height: 50vh;
     }
     .search {
-        text-align: center;
+        text-align: center;  
         display: flex;
         justify-content: center;
-        .next{
+        .bt-next{
             // background-color: red;
-            width: calc(50vw / 2);
+            width: 100%;
         }
-        .prev {
+        .bt-prev {
             // background-color: blue;
-            width: calc(50vw / 2);
+            width: 100%;
         }
     }
 }
@@ -103,18 +103,20 @@ button {
     width: 100%;
     height: 5rem;
     border: 1px solid $color-white;
+    transition: all 0.3s ease 0s;
     &:hover {
         background-color: $color-white;
         color: $color-bg;
-
+        
     }
 }
 
 .download{
-    width: calc(50vw /2);
+    // width: calc(50vw /2);
+    width: 100%;
 }
 .anime{
-    width: calc(50vw /2);
+    width: 100%;
 }
 select {
     text-align: center;
@@ -139,8 +141,8 @@ select {
         color: $color-white-half;
         font-weight: bolder;
         text-decoration: none;
-        &::after {
-            text-decoration: none;
+        &:hover{
+            transition: 250ms linear;
         }
     }
     margin: 0;
@@ -153,3 +155,64 @@ select {
     align-items: center;
     justify-content: center;
 }
+//// mob
+
+.main,
+.video {
+    width: 50rem; 
+    height: 50vh;
+    // width: 100%; //490px min
+}
+
+@media screen and (max-width: 900px) {
+    .main,
+    .video {
+        width: 100vw;
+        // width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main,
+    .video {
+        height: 25rem;
+        // width: 100%;
+    }
+}
+@media screen and (max-width: 358px) {
+    section {
+        .header{
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+    select, button {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 280px) {
+    select, button {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-height: 748px) {
+    .main,
+    .video{
+        height: 50vh;
+    }
+    // .stage-two {
+    //     padding-top: 0;
+    //     padding-bottom: 2rem;
+    // }
+}
+
+@media screen and (max-height: 640px) {
+    .main,
+    .video {
+        height: 40vh;
+    }
+    
+}
+

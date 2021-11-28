@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e3522887be.js" crossorigin="anonymous"></script>
     <title>Anime Clips</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         <div class="wrapper">
             <section>
                 <div class="header">
-                    <h1>Random Anime Clip</h1>
+                    <h1>Anime Clips</h1>
                 </div>
             </section>
         </div>
@@ -23,24 +24,25 @@
             <div class="main">
                 <div class="container">
                     <div class="search">
-                        <div class="prev"><button>Prev</button></div>
-                        <div class="next"><button>Next</button></div>
+                        <div onclick="prevVideo()" id="prev" class="bt-prev"><button>&laquo;Prev</button></div>
+                        <div onclick="nextVideo()" id="next" class="bt-next"><button>Next&raquo;</button></div>
                     </div>
                 </div>
 
                 <div class="video">
-                    <img width="100%" height="100%" src="https://media.giphy.com/media/ayMW3eqvuP00o/giphy.gif" alt="GIF">
+                    <img id="source" width="100%" height="100%" src="https://media.giphy.com/media/ayMW3eqvuP00o/giphy.gif" alt="GIF">
                 </div>
                 <div class="search">
-                    <div class="download">
-                        <button>Download</button>
+                    <div id="download" class="download">
+                        <button id="dwl-text"><i class="fas fa-download"></i></button>
                     </div>
                     <div class="anime">
                         <form>
-                            <select name = "dropdown">
-                                <option value = "one-piece" selected>One Piece</option>
-                                <option value = "bleach">Bleach</option>
-                                <option value = "naruto" required>Naruto</option>
+                            <select onchange="scheduleA.call(this, event)" name = "dropdown" id="UserSelect">
+                                <option id="option" value = "all" selected>All</option>
+                                <option id="option" value = "one-piece" selected>One Piece</option>
+                                <option id="option" value = "bleach">Bleach</option>
+                                <option id="option" value = "naruto" required>Naruto</option>
                             </select>
                         </form>
                     </div>
@@ -51,10 +53,12 @@
     <div class="stage-three">
         <section>
             <div class="info">
-                <p>Creator <a href="https://github.com/freakGE">Vito</a></p>
+                <p>by <a href="https://github.com/freakGE">Vito</a></p>
             </div>
         </section>
     </div>
     </div>
+    <script src="javascript/FileSaver.min.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>

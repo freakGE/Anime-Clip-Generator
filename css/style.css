@@ -54,19 +54,17 @@ section .header h1 {
 }
 .stage-two .video {
   background-color: royalblue;
-  width: 50vw;
-  height: 50vh;
 }
 .stage-two .search {
   text-align: center;
   display: flex;
   justify-content: center;
 }
-.stage-two .search .next {
-  width: calc(50vw / 2);
+.stage-two .search .bt-next {
+  width: 100%;
 }
-.stage-two .search .prev {
-  width: calc(50vw / 2);
+.stage-two .search .bt-prev {
+  width: 100%;
 }
 
 button {
@@ -77,6 +75,7 @@ button {
   width: 100%;
   height: 5rem;
   border: 1px solid #f1e9f1;
+  transition: all 0.3s ease 0s;
 }
 button:hover {
   background-color: #f1e9f1;
@@ -84,11 +83,11 @@ button:hover {
 }
 
 .download {
-  width: calc(50vw /2);
+  width: 100%;
 }
 
 .anime {
-  width: calc(50vw /2);
+  width: 100%;
 }
 
 select {
@@ -125,6 +124,51 @@ select:hover {
   font-weight: bolder;
   text-decoration: none;
 }
-.stage-three a::after {
-  text-decoration: none;
+.stage-three a:hover {
+  transition: 250ms linear;
+}
+
+.main,
+.video {
+  width: 50rem;
+  height: 50vh;
+}
+
+@media screen and (max-width: 900px) {
+  .main,
+.video {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main,
+.video {
+    height: 25rem;
+  }
+}
+@media screen and (max-width: 358px) {
+  section .header h1 {
+    font-size: 2rem;
+  }
+
+  select, button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  select, button {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-height: 748px) {
+  .main,
+.video {
+    height: 50vh;
+  }
+}
+@media screen and (max-height: 640px) {
+  .main,
+.video {
+    height: 40vh;
+  }
 }/*# sourceMappingURL=style.css.map */
