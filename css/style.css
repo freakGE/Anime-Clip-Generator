@@ -81,6 +81,10 @@ button:hover {
   background-color: #f1e9f1;
   color: #1d2228;
 }
+button:active {
+  transition: 20ms ease-in-out 10ms;
+  background-color: rgba(241, 233, 241, 0.85);
+}
 
 .download {
   width: 100%;

@@ -12,8 +12,9 @@ $color-purple: #a350a3;
 $color-pink: #c1436d;
 $color-bg: #1d2228;
 $color-bg-half: hsla(213, 15%, 14%, 0.952);
-$color-white: #f1e9f1;
+$color-white: hsl(300, 22%, 93%);
 $color-white-half: hsla(300, 22%, 93%, 0.541);
+$color-white-active: hsla(300, 22%, 93%, 0.85);
 //
 $video-width: 50vw;
 //
@@ -107,6 +108,12 @@ button {
     &:hover {
         background-color: $color-white;
         color: $color-bg;
+    }
+    &:active {
+        transition: 20ms ease-in-out 10ms;
+        // transform: translateY(2px);
+        background-color: $color-white-active;
+        
         
     }
 }
